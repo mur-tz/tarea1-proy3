@@ -27,7 +27,7 @@ public class AdminController {
 
     @Autowired
     private PasswordEncoder passwordEncoder;
-
+    /*
     @PostMapping
     @PreAuthorize("hasRole('SUPER_ADMIN')")
     public User createAdministrator(@RequestBody User newAdminUser) {
@@ -44,5 +44,5 @@ public class AdminController {
         user.setRole(optionalRole.get());
 
         return userRepository.save(user);
-    }
+    }*/
 }

@@ -68,4 +68,14 @@ public class Role {
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
+
+    // Constructors
+
+    public Role() {
+    }
+
+    public Role(RoleEnum name, String description) {
+        this.name = name;
+        this.description = description;
+    }
 }

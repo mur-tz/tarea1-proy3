@@ -39,13 +39,22 @@ public class User implements UserDetails {
         return List.of(authority);
     }
 
-    @OneToOne(cascade = CascadeType.REMOVE)
+    @ManyToOne(cascade = CascadeType.REMOVE)
     @JoinColumn(name = "role_id", referencedColumnName = "id", nullable = false)
     private Role role;
 
     // Constructors
     public User() {}
 
+    public User(String name, String lastname, String email, String password, Date createdAt, Date updatedAt, Role role) {
+        this.name = name;
+        this.lastname = lastname;
+        this.email = email;
+        this.password = password;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.role = role;
+    }
 
     @Override
     public boolean isAccountNonExpired() {
